@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{2a12d025-c2ec-49af-84af-2c26d0618e38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu">
+      <UniqueIdentifier>{d87d34a8-01b2-4bc7-a2bc-c549c4d1a8a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu\GUI">
+      <UniqueIdentifier>{667608eb-d4cc-412a-aeba-b122da0d9f92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu\Features">
+      <UniqueIdentifier>{ef9dc22c-830d-487f-a798-f389dbcaa9a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu\Authsystem">
+      <UniqueIdentifier>{c9dbfc73-3913-41bb-a38d-ec402c7f3442}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VMProtect">
+      <UniqueIdentifier>{f30f5102-9dce-4344-822a-22eaac707b0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Propstuff">
+      <UniqueIdentifier>{ee4de423-a620-4be2-8d07-8813f91963a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SkinStuff">
+      <UniqueIdentifier>{ad089bc0-8252-4a70-9ca3-3607ca658a5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WeaponStuff">
+      <UniqueIdentifier>{4b4e7f83-bb2d-43ae-9b40-6f0af47b2b49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="INI">
+      <UniqueIdentifier>{b622938d-a0eb-4287-a195-d7d69f4d235f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DXHook">
+      <UniqueIdentifier>{727710b2-9d1c-4bd8-a896-df4ce831e648}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu\Hook">
+      <UniqueIdentifier>{8f84397f-1560-44cd-bf63-2f9f734ef3d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Discord">
+      <UniqueIdentifier>{8f6195c0-7291-42a2-9f12-271d25a367a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Discord\Discord-RPC">
+      <UniqueIdentifier>{624ba444-b7db-4c81-acc4-eed45c23d9aa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nativeCaller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NativeInvoker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputHook.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="keyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Features.h">
+      <Filter>Menu\Features</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI.h">
+      <Filter>Menu\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="subs.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="menu.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="enums.h">
+      <Filter>Menu\Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="natives.h">
+      <Filter>Menu\Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooking.h">
+      <Filter>Menu\Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="Auth\Networking\atlrx.h">
+      <Filter>Menu\Authsystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Auth\Networking\Auth.h">
+      <Filter>Menu\Authsystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Auth\Networking\RegExp.h">
+      <Filter>Menu\Authsystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Auth\Networking\sha512.hh">
+      <Filter>Menu\Authsystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Auth\Networking\StringProcess.h">
+      <Filter>Menu\Authsystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Auth\Networking\Web2.0.h">
+      <Filter>Menu\Authsystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Auth\Networking\WinHttpClient.h">
+      <Filter>Menu\Authsystem</Filter>
+    </ClInclude>
+    <ClInclude Include="VMProtect\include\VMProtectDDK.h">
+      <Filter>VMProtect</Filter>
+    </ClInclude>
+    <ClInclude Include="VMProtect\include\VMProtectSDK.h">
+      <Filter>VMProtect</Filter>
+    </ClInclude>
+    <ClInclude Include="MinHook\include\MinHook.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CrossMapping.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlite3\sqlite3ext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlite3\sqlite3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="data_props.h">
+      <Filter>Propstuff</Filter>
+    </ClInclude>
+    <ClInclude Include="propplacement.h">
+      <Filter>Propstuff</Filter>
+    </ClInclude>
+    <ClInclude Include="props.h">
+      <Filter>Propstuff</Filter>
+    </ClInclude>
+    <ClInclude Include="Global.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="skins.h">
+      <Filter>SkinStuff</Filter>
+    </ClInclude>
+    <ClInclude Include="Functions.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="database.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="weapons.h">
+      <Filter>WeaponStuff</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="menu_functions.h">
+      <Filter>WeaponStuff</Filter>
+    </ClInclude>
+    <ClInclude Include="inifile.h">
+      <Filter>INI</Filter>
+    </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Detour.h">
+      <Filter>Menu\Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="D3d11Hook.h">
+      <Filter>DXHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooking\Hook.h">
+      <Filter>DXHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooking\Pools.h">
+      <Filter>DXHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooking\dassert.h">
+      <Filter>DXHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Discord\discord.hpp">
+      <Filter>Discord</Filter>
+    </ClInclude>
+    <ClInclude Include="Discord\include\discord_register.h">
+      <Filter>Discord\Discord-RPC</Filter>
+    </ClInclude>
+    <ClInclude Include="Discord\include\discord_rpc.h">
+      <Filter>Discord\Discord-RPC</Filter>
+    </ClInclude>
+    <ClInclude Include="Discord\maindiscord.h">
+      <Filter>Discord</Filter>
+    </ClInclude>
+    <ClInclude Include="IDX11.h">
+      <Filter>DXHook</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NativeInvoker.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="keyboard.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputHook.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Features.cpp">
+      <Filter>Menu\Features</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI.cpp">
+      <Filter>Menu\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="CrossMapping.cpp">
+      <Filter>Menu\Hook</Filter>
+    </ClCompile>
+    <ClCompile Include="Hooking.cpp">
+      <Filter>Menu\Hook</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sqlite3\sqlite3.c">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="propplacement.cpp">
+      <Filter>Propstuff</Filter>
+    </ClCompile>
+    <ClCompile Include="Global.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="skins.cpp">
+      <Filter>SkinStuff</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="database.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="weapons.cpp">
+      <Filter>WeaponStuff</Filter>
+    </ClCompile>
+    <ClCompile Include="menu_functions.cpp">
+      <Filter>WeaponStuff</Filter>
+    </ClCompile>
+    <ClCompile Include="inifile.cpp">
+      <Filter>INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Auth.cpp">
+      <Filter>Menu\Authsystem</Filter>
+    </ClCompile>
+    <ClCompile Include="D3d11Hook.cpp">
+      <Filter>DXHook</Filter>
+    </ClCompile>
+    <ClCompile Include="Hooking\Hook.cpp">
+      <Filter>DXHook</Filter>
+    </ClCompile>
+    <ClCompile Include="Hooking\Pools.cpp">
+      <Filter>DXHook</Filter>
+    </ClCompile>
+    <ClCompile Include="Discord\discord.cpp">
+      <Filter>Discord</Filter>
+    </ClCompile>
+    <ClCompile Include="Discord\maindiscord.cpp">
+      <Filter>Discord</Filter>
+    </ClCompile>
+    <ClCompile Include="IDX11.cpp">
+      <Filter>DXHook</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="d:\Visual Studio\VC\Tools\MSVC\14.11.25503\include\xlocbuf" />
+    <None Include="ClassDiagram.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="MinHook\lib\libMinHook-x64-v140-md.lib" />
+    <Library Include="MinHook\lib\libMinHook-x64-v140-mdd.lib" />
+    <Library Include="..\..\..\..\..\..\..\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86\d3d9.lib" />
+    <Library Include="Discord\lib\discord-rpc.lib">
+      <Filter>Discord\Discord-RPC</Filter>
+    </Library>
+    <Library Include="ScriptHookV.lib">
+      <Filter>Main</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Build\Release\aztralmain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="Detour.asm">
+      <Filter>Menu\Hook</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>

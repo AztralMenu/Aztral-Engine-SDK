@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="comp|x64">
+      <Configuration>comp</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="X64 DEBUG WEB|x64">
+      <Configuration>X64 DEBUG WEB</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{618A4253-6C78-433C-93B5-8C71F873FAD3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Aztral</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <ProjectName>Aztral</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='comp|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='X64 DEBUG WEB|x64'">
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='comp|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)Build\$(Configuration)\</OutDir>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetExt>.dll</TargetExt>
+    <IntDir>$(SolutionDir)Build\Intermediate\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)Build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build\Intermediate\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.dll</TargetExt>
+    <LibraryPath>$(ProjectDir)VMProtect\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64;D:\Visual Studio Preview\Preview\Community\VC\Tools\MSVC\14.12.25827\atlmfc\lib\x64\</LibraryPath>
+    <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    <TargetName>EATMYASS</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='comp|x64'">
+    <OutDir>$(SolutionDir)Build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build\Intermediate\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;WIN32_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)MinHook\include;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)MinHook\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libMinHook-x64-v140-mdd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapExports>true</MapExports>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <AdditionalOptions>/IGNORE:4088 /IGNORE:4006 /IGNORE:4075 /IGNORE:4098 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <CustomBuildStep>
+      <Inputs>%(Inputs)</Inputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;WIN32_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)VMProtect\include;$(ProjectDir)MinHook\include;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;C:\Users\chase.CRR-MSI-X99\source\repos\aztraldev\Aztral Legacy 1.43\packages\directxtk_uwp.2018.4.23.1\build\native\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <MinimalRebuild>
+      </MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RemoveUnreferencedCodeData>false</RemoveUnreferencedCodeData>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <OptimizeReferences>
+      </OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)VMProtect\include;$(ProjectDir)Capstone\msvc\x64\Release;$(ProjectDir)detours\lib.X64;$(ProjectDir)DXHook;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x64;C:\Users\chase.CRR-MSI-X99\source\repos\aztraldev\Aztral Legacy 1.43\packages\directxtk_uwp.2018.4.23.1\build\native\lib\x64\Release;$(ProjectDir)MinHook\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>VMProtectSDK64.lib;libMinHook-x64-v140-md.lib;detours.lib;d3d11.lib;d3dcompiler.lib;dxgi.lib;FW1FontWrapper.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapExports>true</MapExports>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <AdditionalOptions>/LTCG %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='comp|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;WIN32_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)MinHook\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)MinHook\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libMinHook-x64-v140-md.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='X64 DEBUG WEB|x64'">
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);$(ProjectDir)\lib\ScriptHookV.lib</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Auth\Networking\atlrx.h" />
+    <ClInclude Include="Auth\Networking\Auth.h" />
+    <ClInclude Include="Auth\Networking\RegExp.h" />
+    <ClInclude Include="Auth\Networking\sha512.hh" />
+    <ClInclude Include="Auth\Networking\StringProcess.h" />
+    <ClInclude Include="Auth\Networking\Web2.0.h" />
+    <ClInclude Include="Auth\Networking\WinHttpClient.h" />
+    <ClInclude Include="CrossMapping.h" />
+    <ClInclude Include="D3d11Hook.h" />
+    <ClInclude Include="database.h" />
+    <ClInclude Include="data_props.h" />
+    <ClInclude Include="Detour.h" />
+    <ClInclude Include="Discord\discord.hpp" />
+    <ClInclude Include="Discord\include\discord_register.h" />
+    <ClInclude Include="Discord\include\discord_rpc.h" />
+    <ClInclude Include="Discord\maindiscord.h" />
+    <ClInclude Include="enums.h" />
+    <ClInclude Include="Features.h" />
+    <ClInclude Include="Functions.h" />
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="Hooking.h" />
+    <ClInclude Include="Hooking\dassert.h" />
+    <ClInclude Include="Hooking\Hook.h" />
+    <ClInclude Include="Hooking\Pools.h" />
+    <ClInclude Include="IDX11.h" />
+    <ClInclude Include="inifile.h" />
+    <ClInclude Include="InputHook.h" />
+    <ClInclude Include="keyboard.h" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="Memory.h" />
+    <ClInclude Include="GUI.h" />
+    <ClInclude Include="menu_functions.h" />
+    <ClInclude Include="MinHook\include\MinHook.h" />
+    <ClInclude Include="nativeCaller.h" />
+    <ClInclude Include="NativeInvoker.h" />
+    <ClInclude Include="natives.h" />
+    <ClInclude Include="menu.h" />
+    <ClInclude Include="propplacement.h" />
+    <ClInclude Include="props.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
+    <ClInclude Include="skins.h" />
+    <ClInclude Include="sqlite3\sqlite3.h" />
+    <ClInclude Include="sqlite3\sqlite3ext.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Structs.h" />
+    <ClInclude Include="subs.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="types.h" />
+    <ClInclude Include="VMProtect\include\VMProtectDDK.h" />
+    <ClInclude Include="VMProtect\include\VMProtectSDK.h" />
+    <ClInclude Include="weapons.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Auth.cpp" />
+    <ClCompile Include="CrossMapping.cpp" />
+    <ClCompile Include="D3d11Hook.cpp" />
+    <ClCompile Include="database.cpp" />
+    <ClCompile Include="Discord\discord.cpp" />
+    <ClCompile Include="Discord\maindiscord.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='comp|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='comp|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Features.cpp" />
+    <ClCompile Include="Functions.cpp" />
+    <ClCompile Include="Global.cpp" />
+    <ClCompile Include="Hooking.cpp" />
+    <ClCompile Include="Hooking\Hook.cpp" />
+    <ClCompile Include="Hooking\Pools.cpp" />
+    <ClCompile Include="IDX11.cpp" />
+    <ClCompile Include="inifile.cpp" />
+    <ClCompile Include="InputHook.cpp" />
+    <ClCompile Include="keyboard.cpp" />
+    <ClCompile Include="Log.cpp" />
+    <ClCompile Include="Memory.cpp" />
+    <ClCompile Include="GUI.cpp" />
+    <ClCompile Include="menu_functions.cpp" />
+    <ClCompile Include="NativeInvoker.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="propplacement.cpp" />
+    <ClCompile Include="skins.cpp" />
+    <ClCompile Include="sqlite3\sqlite3.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="weapons.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="d:\Visual Studio\VC\Tools\MSVC\14.11.25503\include\xlocbuf" />
+    <MASM Include="Detour.asm">
+      <FileType>Document</FileType>
+    </MASM>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\..\..\..\..\..\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86\d3d9.lib" />
+    <Library Include="Discord\lib\discord-rpc.lib" />
+    <Library Include="MinHook\lib\libMinHook-x64-v140-md.lib" />
+    <Library Include="MinHook\lib\libMinHook-x64-v140-mdd.lib" />
+    <Library Include="ScriptHookV.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Build\Release\aztralmain.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+    <Import Project="..\packages\directxtk_uwp.2018.4.23.1\build\native\directxtk_uwp.targets" Condition="Exists('..\packages\directxtk_uwp.2018.4.23.1\build\native\directxtk_uwp.targets')" />
+    <Import Project="..\packages\directxtk_desktop_2015.2018.4.23.1\build\native\directxtk_desktop_2015.targets" Condition="Exists('..\packages\directxtk_desktop_2015.2018.4.23.1\build\native\directxtk_desktop_2015.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\directxtk_uwp.2018.4.23.1\build\native\directxtk_uwp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\directxtk_uwp.2018.4.23.1\build\native\directxtk_uwp.targets'))" />
+    <Error Condition="!Exists('..\packages\directxtk_desktop_2015.2018.4.23.1\build\native\directxtk_desktop_2015.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\directxtk_desktop_2015.2018.4.23.1\build\native\directxtk_desktop_2015.targets'))" />
+  </Target>
+</Project>
